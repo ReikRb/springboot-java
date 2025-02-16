@@ -16,7 +16,11 @@ repositories {
 }
 
 application {
-    mainClass = 'org.example.ClassTest'
+    mainClass = 'org.example.Methods'
+}
+
+run {
+    standardInput = System.in
 }
 
 dependencies {
