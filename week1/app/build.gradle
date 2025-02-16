@@ -15,6 +15,10 @@ repositories {
     mavenCentral()
 }
 
+application {
+    mainClass = 'org.example.ClassTest'
+}
+
 dependencies {
     // Use JUnit Jupiter for testing.
     testImplementation libs.junit.jupiter
@@ -32,15 +36,15 @@ java {
     }
 }
 
-task runMainClass(type: JavaExec) {
-    main = 'org.example.App'  // Especifica la clase que quieres ejecutar
-    classpath = sourceSets.main.runtimeClasspath
-}
+// task runMainClass(type: JavaExec) {
+//     main = 'org.example.App'  // Especifica la clase que quieres ejecutar
+//     classpath = sourceSets.main.runtimeClasspath
+// }
 
-task runClassTest(type: JavaExec) {
-    main = 'org.example.ClassTest'  // Especifica la clase que quieres ejecutar
-    classpath = sourceSets.main.runtimeClasspath
-}
+// task runClassTest(type: JavaExec) {
+//     main = 'org.example.ClassTest'  // Especifica la clase que quieres ejecutar
+//     classpath = sourceSets.main.runtimeClasspath
+// }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
